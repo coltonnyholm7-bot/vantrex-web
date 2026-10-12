@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vantrex Browser</title>
+<style>
+:root{color-scheme:dark;--bg:#0b0d12;--panel:#131722;--panel2:#1a2030;--line:#283044;--text:#f3f5fb;--muted:#9ca7bd;--accent:#7c5cff;--accent2:#27d5c2}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#17142b 0,#0b0d12 48%);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--text);min-height:100vh}
+header{height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;border-bottom:1px solid #ffffff12;background:#0b0d12c9;position:sticky;top:0;backdrop-filter:blur(14px);z-index:2}
+.brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.3px}.logo{display:grid;place-items:center;width:34px;height:34px;border-radius:11px;background:linear-gradient(135deg,var(--accent),var(--accent2));font-weight:900;color:#fff;box-shadow:0 0 25px #7c5cff44}
+.tag{font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:5px 10px}
+main{max-width:1050px;margin:0 auto;padding:9vh 22px 60px}.hero{text-align:center;margin-bottom:32px}.eyebrow{color:var(--accent2);font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:800}.hero h1{font-size:clamp(38px,7vw,68px);line-height:1.05;margin:12px 0;background:linear-gradient(100deg,#fff,#b9b4ff 55%,#7ff4e5);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-2px}.hero p{color:var(--muted);margin:0 auto;max-width:550px}
+.searchbox{display:flex;gap:9px;max-width:780px;margin:30px auto 13px;padding:8px;background:#171b27;border:1px solid #343b52;border-radius:17px;box-shadow:0 18px 60px #0007}.searchbox input{flex:1;min-width:0;background:transparent;border:0;outline:0;color:var(--text);font:inherit;padding:12px 13px}.searchbox button{border:0;border-radius:11px;background:linear-gradient(135deg,var(--accent),#5940ce);color:white;font:700 14px system-ui;padding:0 22px;cursor:pointer}.searchbox button:hover{filter:brightness(1.15)}.hint{text-align:center;color:#737f96;font-size:12px;margin-bottom:45px}
+.sectionhead{display:flex;align-items:center;justify-content:space-between;margin:0 0 15px}.sectionhead h2{font-size:16px;margin:0}.sectionhead span{font-size:12px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.tile{min-height:115px;background:linear-gradient(145deg,#171c29,#11151f);border:1px solid var(--line);border-radius:16px;padding:17px;text-decoration:none;color:var(--text);transition:transform .15s,border-color .15s;display:flex;flex-direction:column;gap:10px}.tile:hover{transform:translateY(-3px);border-color:#7463d6}.tileicon{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:#26243d;font-size:20px}.tile strong{font-size:14px}.tile small{color:var(--muted);font-size:12px}
+.bottom{margin-top:27px;display:grid;grid-template-columns:1.2fr 1fr;gap:13px}.card{background:#11151fbb;border:1px solid var(--line);border-radius:16px;padding:20px}.card h3{font-size:14px;margin:0 0 7px}.card p{font-size:13px;color:var(--muted);margin:0}.quicklinks{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.quicklinks button{background:#1b2130;border:1px solid var(--line);color:#dfe4f4;border-radius:9px;padding:7px 10px;cursor:pointer}
+footer{text-align:center;color:#68748b;font-size:12px;padding:22px;border-top:1px solid #ffffff10}
+@media(max-width:650px){header{padding:0 18px}.grid{grid-template-columns:repeat(2,1fr)}.bottom{grid-template-columns:1fr}main{padding-top:55px}.searchbox button{padding:0 14px}}
+</style>
+</head>
+<body>
+<header><div class="brand"><div class="logo">V</div><span>VANTREX <span style="color:#9ca7bd;font-weight:500">BROWSER</span></span></div><div class="tag">Personal start page</div></header>
+<main>
+<section class="hero">
+<div class="eyebrow">Your web, your way</div>
+<h1>Where to next?</h1>
+<p>A clean launchpad for searching the web, opening your favorite sites, and keeping your go-to links in one place.</p>
+<form class="searchbox" id="searchForm"><input id="query" autocomplete="off" placeholder="Search the web or enter a website…" aria-label="Search or enter website"><button type="submit">Go ↗</button></form>
+<div class="hint">Tip: enter a website like wikipedia.org or type a search.</div>
+</section>
+<section>
+<div class="sectionhead"><h2>Quick launch</h2><span>Click a tile to open in a new tab</span></div>
+<div class="grid">
+<a class="tile" href="https://www.google.com" target="_blank" rel="noopener"><div class="tileicon">⌕</div><strong>Google</strong><small>Search the web</small></a>
+<a class="tile" href="https://www.wikipedia.org" target="_blank" rel="noopener"><div class="tileicon">W</div><strong>Wikipedia</strong><small>Explore knowledge</small></a>
+<a class="tile" href="https://www.youtube.com" target="_blank" rel="noopener"><div class="tileicon">▶</div><strong>YouTube</strong><small>Videos and creators</small></a>
+<a class="tile" href="https://itch.io/games" target="_blank" rel="noopener"><div class="tileicon">🎮</div><strong>itch.io Games</strong><small>Indie games</small></a>
+<a class="tile" href="https://www.coolmathgames.com" target="_blank" rel="noopener"><div class="tileicon">✳</div><strong>Coolmath Games</strong><small>Puzzles and games</small></a>
+<a class="tile" href="https://neal.fun" target="_blank" rel="noopener"><div class="tileicon">✦</div><strong>Neal.fun</strong><small>Interactive projects</small></a>
+<a class="tile" href="https://www.khanacademy.org" target="_blank" rel="noopener"><div class="tileicon">▱</div><strong>Khan Academy</strong><small>Learn something</small></a>
+<a class="tile" href="https://www.thewikigame.com" target="_blank" rel="noopener"><div class="tileicon">↗</div><strong>The Wiki Game</strong><small>Wikipedia challenge</small></a>
+</div>
+</section>
+<div class="bottom">
+<div class="card"><h3>⚡ Quick links</h3><p>Add your own favorite sites here later by editing this page's HTML.</p><div class="quicklinks"><button data-url="https://www.google.com">Search</button><button data-url="https://www.wikipedia.org">Reference</button><button data-url="https://itch.io/games">Games</button></div></div>
+<div class="card"><h3>ⓘ A quick heads-up</h3><p>This is a start page, not a full browser or web proxy. Sites open in new tabs, and school network restrictions may still apply. Only use sites allowed by your school.</p></div>
+</div>
+</main>
+<footer>Vantrex Browser · Made for your everyday web shortcuts</footer>
+<script>
+const form=document.getElementById('searchForm'), input=document.getElementById('query');
+function go(raw){
+ let q=raw.trim(); if(!q)return;
+ let url;
+ if(/^https?:\/\//i.test(q)) url=q;
+ else if(/^[\w-]+(\.[\w-]+)+(\/.*)?$/.test(q) && !q.includes(' ')) url='https://'+q;
+ else url='https://www.google.com/search?q='+encodeURIComponent(q);
+ window.open(url,'_blank','noopener');
+}
+form.addEventListener('submit',e=>{e.preventDefault();go(input.value)});
+document.querySelectorAll('[data-url]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.url)));
+</script>
+</body>
+</html>
